@@ -36,6 +36,25 @@ public:
 	// called if you want to be sure that it will be updated after the normal update loop
 	virtual void LateUpdate();
 
+
+
+};
+
+struct ComponentComparer
+{
+	std::string m_name;
+	
+
+	ComponentComparer(std::string l_name)
+		: m_name(l_name)
+	{	
+	}
+
+	bool operator()(Component* l_object)
+	{
+		return (l_object->m_name == m_name ? true : false);
+	}
+
 };
 
 #endif

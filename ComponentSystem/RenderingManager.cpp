@@ -2,11 +2,15 @@
 
 
 
-RenderingManager::RenderingManager()
+RenderingManager::RenderingManager(void)
 {
 }
 
 
-RenderingManager::~RenderingManager()
+RenderingManager::~RenderingManager(void)
+{
+}
+
+void RenderingManager::Render()
 {
 }

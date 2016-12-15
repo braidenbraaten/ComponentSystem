@@ -66,16 +66,38 @@ void GameObject::AddComponent(Component * l_component)
 
 Component * GameObject::FindComponentByName(std::string l_name)
 {
-	return nullptr;
+	component_vector_itr itr = std::find_if(m_components.begin(), m_components.end(), ComponentComparer(l_name));
+
+	if (itr != m_components.end())
+	{
+		return *itr;
+	}
+	else
+	{
+		return NULL;
+	}
 }
 
 void GameObject::AddChild(GameObject * l_gameObject)
 {
+
+	l_gameObject->m_parent = this;
+	l_gameObject->Create();
+	this->m_children.push_back(l_gameObject);
 }
 
 GameObject * GameObject::FindChildByName(std::string l_name)
 {
-	return nullptr;
+	game_Object_vector_itr itr = std::find_if(m_children.begin(), m_children.end(), GameObjectComparer(l_name));
+
+	if (itr != m_children.end())
+	{
+		return *itr;
+	}
+	else
+	{
+		return NULL;
+	}
 }
 
 std::vector<GameObject*> GameObject::FindAllChildrenByName(std::string l_name)

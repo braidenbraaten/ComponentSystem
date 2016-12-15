@@ -1,5 +1,8 @@
-﻿  Transform.cpp
-  Component.cpp
+﻿  Component.cpp
   Generating Code...
-  ComponentSystem.vcxproj -> C:\Users\braiden.braaten\documents\visual studio 2015\Projects\ComponentSystem\Debug\ComponentSystem.exe
-  ComponentSystem.vcxproj -> C:\Users\braiden.braaten\documents\visual studio 2015\Projects\ComponentSystem\Debug\ComponentSystem.pdb (Partial PDB)
+  Compiling...
+  GameObject.cpp
+  ComponentManager.cpp
+  Generating Code...
+  ComponentSystem.vcxproj -> C:\Users\braiden.braaten\Source\Repos\ComponentSystem\Debug\ComponentSystem.exe
+  ComponentSystem.vcxproj -> C:\Users\braiden.braaten\Source\Repos\ComponentSystem\Debug\ComponentSystem.pdb (Partial PDB)

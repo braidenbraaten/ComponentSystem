@@ -40,11 +40,13 @@ public:
 	void ResizeComponents();
 
 	//Singleton Implimentation
-	static ComponentManager* s_instance;
+	
 
 	static inline ComponentManager* getInstance(void)
 	{
-		if (s_instance == nullptr)
+		static ComponentManager* s_instance;
+
+		if (s_instance == NULL)
 		{
 			s_instance = new ComponentManager();
 		}
@@ -52,10 +54,10 @@ public:
 		return s_instance;
 	}
 
-	static inline bool exists(void)
-	{
-		return s_instance != 0;
-	}
+	//static inline bool exists(void)
+	//{
+	//	return s_instance != 0;
+	//}
 
 };
 

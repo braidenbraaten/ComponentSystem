@@ -60,5 +60,22 @@ public:
 
 };
 
+struct GameObjectComparer
+{
+	std::string m_name;
+
+
+	GameObjectComparer(std::string l_name)
+		: m_name(l_name)
+	{
+	}
+
+	bool operator()(GameObject* l_object)
+	{
+		return (l_object->m_name == m_name ? true : false);
+	}
+
+};
+
 #endif // !GAMEOBJECT_H
 
