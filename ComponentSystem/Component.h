@@ -1,7 +1,12 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
+
 #include <string>
 #include <vector>
+#include <objbase.h>
+//GUID's
+#include <guiddef.h>
+
 class GameObject;
 
 
@@ -12,6 +17,8 @@ class Component
 
 
 public:
+	
+	GUID m_guid;
 	std::string m_name;
 	bool	    m_isEnabled;
 

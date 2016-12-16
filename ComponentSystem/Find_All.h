@@ -1,3 +1,5 @@
+
+#pragma once
 #include <vector>
 
 template<typename _inIt, typename _Pr> inline

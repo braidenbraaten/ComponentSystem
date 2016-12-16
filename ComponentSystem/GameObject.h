@@ -14,6 +14,7 @@
 class GameObject
 {
 public:
+	GUID m_guid;
 	std::string m_name;
 	std::string m_tag;
 
@@ -38,7 +39,6 @@ public:
 	void Destroy();
 
 	void AddComponent(Component* l_component);
-	Component* FindComponentByName(std::string l_name);
 
 	template <typename T>
 	T* FindComponentByType()

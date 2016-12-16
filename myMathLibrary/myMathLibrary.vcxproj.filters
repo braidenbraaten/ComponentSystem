@@ -45,9 +45,6 @@
     <ClCompile Include="mat3.cpp">
       <Filter>Source Files\Matricies</Filter>
     </ClCompile>
-    <ClCompile Include="mat4.cpp">
-      <Filter>Source Files\Matricies</Filter>
-    </ClCompile>
     <ClCompile Include="vec2.cpp">
       <Filter>Source Files\Shapes\Vectors</Filter>
     </ClCompile>
@@ -71,6 +68,9 @@
     </ClCompile>
     <ClCompile Include="Plane2D.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mat4.cpp">
+      <Filter>Source Files\Matricies</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

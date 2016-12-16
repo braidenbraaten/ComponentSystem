@@ -6,7 +6,7 @@ GameObject::GameObject(void)
 	this->m_tag = "";
 	this->m_transform = nullptr;
 	this->m_parent = nullptr;
-	
+	HRESULT l_result = CoCreateGuid(&m_guid);
 }
 
 GameObject::GameObject(std::string l_name)
@@ -15,6 +15,7 @@ GameObject::GameObject(std::string l_name)
 	this->m_tag = "";
 	this->m_transform = nullptr;
 	this->m_parent = nullptr;
+	HRESULT l_result = CoCreateGuid(&m_guid);
 }
 
 GameObject::~GameObject(void)
@@ -52,31 +53,12 @@ void GameObject::Destroy()
 
 void GameObject::AddComponent(Component * l_component)
 {
-	if (l_component->m_name == "ScriptComponent" || FindComponentByName(l_component->m_name) == nullptr)
-	{
-		l_component->m_gameObject = this;
-		m_components.push_back(l_component);
-		l_component->Start();
-	}
-	else
-	{
-
-	}
+	l_component->m_gameObject = this;
+	m_components.push_back(l_component);
+	l_component->Start();
 }
 
-Component * GameObject::FindComponentByName(std::string l_name)
-{
-	component_vector_itr itr = std::find_if(m_components.begin(), m_components.end(), ComponentComparer(l_name));
 
-	if (itr != m_components.end())
-	{
-		return *itr;
-	}
-	else
-	{
-		return NULL;
-	}
-}
 
 void GameObject::AddChild(GameObject * l_gameObject)
 {

@@ -12,7 +12,9 @@ namespace bab
 		float Magnitude();
 		void Normalize();
 		float sum = x + y + z;
-
+		Vec3(): x(0.0f),y(0.0f),z(0.0f) {}
+		Vec3(float l_x, float l_y, float l_z) : x(l_x), y(l_y), z(l_z) {}
+		Vec3(int l_x, int l_y, int l_z) : x(l_x), y(l_y), z(l_z) {}
 	};
 
 	float dot(const Vec3 &lhs, const Vec3 &rhs);

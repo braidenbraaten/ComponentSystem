@@ -1,6 +1,7 @@
 #include "ComponentManager.h"
 #include "GameObject.h"
 
+ComponentManager* ComponentManager::s_instance = 0;
 
 ComponentManager::ComponentManager(void)
 {
@@ -65,7 +66,7 @@ void ComponentManager::RemoveComponentWithGameObject(GameObject * l_objects)
 
 	for (component_vector_const_itr itr = this->m_components.begin(); itr != this->m_components.end(); ++itr)
 	{
-		if ((*itr)->m_gameObject == l_objects)
+		if ((*itr)->m_guid == l_objects->m_guid)
 		{
 			components_to_remove.push_back((*itr));
 		}

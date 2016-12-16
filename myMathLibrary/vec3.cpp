@@ -8,6 +8,8 @@
 		 return sqrtf((x * x) + (y * y) + (z * z));
 	 }
 
+	 
+
 
 	 Vec3 Vec3::normal()
 	 {

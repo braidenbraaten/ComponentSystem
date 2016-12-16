@@ -1,6 +1,6 @@
 #include "mat4.h"
 #include "mat3.h"
-#include "vec4.h"
+
 #include <stdlib.h>
 #include <ctime>
 
@@ -171,6 +171,10 @@ namespace bab
 		
 	}
 
+	void mat4::test()
+	{
+	}
+
 	void mat4::Translate(float x, float y, float z)
 	{
 		this->Matrix[0][3] += x;
@@ -222,6 +226,19 @@ namespace bab
 
 
 		return Result;
+	}
+
+	Vec4 operator* (const mat4 &m, const Vec4 &vec)
+	{
+		Vec4 result;
+		result.x = (m.Matrix[0][0] * vec.x) + (m.Matrix[0][1] * vec.y) + (m.Matrix[0][2] * vec.z) + (m.Matrix[0][3] * vec.w);
+		result.y = (m.Matrix[1][0] * vec.x) + (m.Matrix[1][1] * vec.y) + (m.Matrix[1][2] * vec.z) + (m.Matrix[1][3] * vec.w);
+		result.z = (m.Matrix[2][0] * vec.x) + (m.Matrix[2][1] * vec.y) + (m.Matrix[2][2] * vec.z) + (m.Matrix[2][3] * vec.w);
+		result.w = (m.Matrix[3][0] * vec.x) + (m.Matrix[3][1] * vec.y) + (m.Matrix[3][2] * vec.z) + (m.Matrix[3][3] * vec.w);
+
+
+
+		return result;
 	}
 
 	mat4 operator*=(mat4&lhs, const mat4&rhs) { for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++) { lhs.Matrix[i][j] *= rhs.Matrix[i][j]; } } return lhs; }

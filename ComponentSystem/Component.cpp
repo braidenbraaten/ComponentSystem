@@ -8,6 +8,7 @@ Component::Component(void)
 	this->m_isEnabled = true;
 	this->m_gameObject = NULL;
 	this->Awake();
+	HRESULT l_result = CoCreateGuid(&m_guid);
 }
 
 Component::Component(std::string l_name)
@@ -16,6 +17,7 @@ Component::Component(std::string l_name)
 	this->m_isEnabled = true;
 	this->m_gameObject = nullptr;
 	this->Awake();
+	HRESULT l_result = CoCreateGuid(&m_guid);
 
 }
 

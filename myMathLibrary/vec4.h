@@ -1,6 +1,9 @@
-#pragma once
+#ifndef VEC4_H
+#define VEC4_H
+
+
 #include <cmath>
-#include "mat4.h"
+
 //namespace for my own math library 
 namespace bab
 {
@@ -26,7 +29,7 @@ namespace bab
 	Vec4& operator-=(Vec4 &lhs, const Vec4 &rhs);
 
 	Vec4 operator* (const Vec4 &lhs, const Vec4 &rhs);
-	Vec4 operator* (const mat4 &m, const Vec4 &vec);
+
 
 	Vec4 operator/ (const Vec4 &lhs, const Vec4 &rhs);
 
@@ -42,3 +45,5 @@ namespace bab
 
 
 }
+
+#endif // !VEC4_H

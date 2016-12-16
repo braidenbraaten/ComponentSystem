@@ -4,19 +4,21 @@
 
 namespace bab
 {
-	void mat3::Identity()
+	 mat3 mat3::Identity()
 	{
+		mat3* result = 0;
 		//Diagonal values set to 1
-		this->Matrix[0][0] = 1;
-		this->Matrix[1][1] = 1;
-		this->Matrix[2][2] = 1;
+		result->Matrix[0][0] = 1;
+		result->Matrix[1][1] = 1;
+		result->Matrix[2][2] = 1;
 		//rest of the matrix values set to 0
-		this->Matrix[0][1] = 0;
-		this->Matrix[0][2] = 0;
-		this->Matrix[1][0] = 0;
-		this->Matrix[1][2] = 0;
-		this->Matrix[2][0] = 0;
-		this->Matrix[2][1] = 0;
+		result->Matrix[0][1] = 0;
+		result->Matrix[0][2] = 0;
+		result->Matrix[1][0] = 0;
+		result->Matrix[1][2] = 0;
+		result->Matrix[2][0] = 0;
+		result->Matrix[2][1] = 0;
+		return (*result);
 
 	}
 

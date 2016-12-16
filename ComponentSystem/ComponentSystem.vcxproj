@@ -81,7 +81,8 @@
       <AdditionalUsingDirectories>sfw;bab;</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)\Visual InterFace\libs\sfw\;$(SolutionDir)\myMathLibrary\libs\bab\;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Visual InterFace\libs\sfw\;$(SolutionDir)\myMathLibrary\libs\bab\;$(SolutionDir)$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>myMathLibrary.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

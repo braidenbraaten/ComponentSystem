@@ -1,17 +1,6 @@
-﻿  vec4.cpp
-  vec3.cpp
-  vec2.cpp
-  Source.cpp
-  Rectangle.cpp
-  Ray2D.cpp
-  Plane2D.cpp
-  mat4.cpp
+﻿  mat4.cpp
 c:\users\braiden.braaten\source\repos\componentsystem\mymathlibrary\mat4.cpp(121): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 c:\users\braiden.braaten\source\repos\componentsystem\mymathlibrary\mat4.cpp(129): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  mat3.cpp
-c:\users\braiden.braaten\source\repos\componentsystem\mymathlibrary\mat3.cpp(96): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\braiden.braaten\source\repos\componentsystem\mymathlibrary\mat3.cpp(104): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Collision.cpp
-  Circle.cpp
+  Source.cpp
   Generating Code...
   myMathLibrary.vcxproj -> C:\Users\braiden.braaten\Source\Repos\ComponentSystem\Debug\myMathLibrary.lib
